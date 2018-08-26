@@ -15,19 +15,6 @@ const database = firebase.database();
 
 export { firebase, database as default };
 
-// // database.ref('expenses')
-// //     .once('value')
-// //     .then((snapshot) => {
-// //         const expenses = [];
-// //         snapshot.forEach((child) => {
-// //             expenses.push({
-// //                 id: child.key,
-// //                 ...child.val()
-// //             });
-// //         });
-// //         console.log(expenses);
-// //     });
-
 // database.ref('expenses')
 //     .on('value', (snapshot) => {
 //         const expenses = [];
