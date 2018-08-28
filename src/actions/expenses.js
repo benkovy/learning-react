@@ -76,7 +76,6 @@ export const startSetExpenses = () => {
                         ...child.val()
                     });
                 });
-                console.log(expenses);
                 dispatch(setExpenses(expenses));
             });
     };
