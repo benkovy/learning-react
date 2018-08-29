@@ -12,7 +12,7 @@ export const startCreation = (credentials) => {
     };
 };
 
-export const startLogout = (credentials) => {
+export const startLogout = () => {
     return (dispatch) => {
         return firebase.auth().signOut();
     };
