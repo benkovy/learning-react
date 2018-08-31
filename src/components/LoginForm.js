@@ -57,7 +57,7 @@ export default class LoginForm extends React.Component {
                         <div className="filler"></div>
                         <input
                             className="input"
-                            type="text"
+                            type="password"
                             placeholder="Password"
                             value={this.state.password}
                             onChange={this.onPasswordChange}
