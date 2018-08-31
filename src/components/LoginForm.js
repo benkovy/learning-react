@@ -42,29 +42,38 @@ export default class LoginForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="login-form-container">
                 {this.state.error && <p>{this.state.error}</p>}
-                <form onSubmit={this.onSubmit}>
-                    <input
-                        type="text"
-                        placeholder="Email"
-                        autoFocus
-                        value={this.state.email}
-                        onChange={this.onEmailChange}
-                    />
-                    <input
-                        type="text"
-                        placeholder="Password"
-                        value={this.state.password}
-                        onChange={this.onPasswordChange}
-                    />
-                    <button>Go</button>
-                    <select
-                        value={this.state.type}
-                        onChange={this.onTypeChange}>
-                        <option value="login">Login</option>
-                        <option value="create">Create</option>
-                    </select>
+                <form className="login-form-container__form" onSubmit={this.onSubmit}>
+                    <div className="login-form-container__user-pass">
+                        <input
+                            className="input"
+                            type="text"
+                            placeholder="Email"
+                            autoFocus
+                            value={this.state.email}
+                            onChange={this.onEmailChange}
+                        />
+                        <div className="filler"></div>
+                        <input
+                            className="input"
+                            type="text"
+                            placeholder="Password"
+                            value={this.state.password}
+                            onChange={this.onPasswordChange}
+                        />
+                    </div>
+                    <div className="login-form-container__select-button">
+                        <button className="button">
+                            {this.state.type.charAt(0).toUpperCase() + this.state.type.slice(1)}
+                        </button>
+                        <select
+                            value={this.state.type}
+                            onChange={this.onTypeChange}>
+                            <option value="login">Login</option>
+                            <option value="create">Create</option>
+                        </select>
+                    </div>
                 </form>
             </div>
         );

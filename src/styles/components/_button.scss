@@ -1,0 +1,22 @@
+.button {
+    background: white;
+    display: inline-block;
+    border: none;
+    color: $dark-gray;
+    padding: $s-size;
+    font-size: 1.8rem; 
+    text-decoration: none;
+    line-height: 1;
+    @include box-shadow(1);
+}
+
+.button--link {
+    background: none;
+    box-shadow: none;
+    color: white;
+}
+
+.button--secondary {
+    background: rgba(black, 0.5);
+    color: white;
+}

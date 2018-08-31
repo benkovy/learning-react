@@ -14,7 +14,10 @@ class LoginPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="box-layout">
+                <div className="box-layout__title-box">
+                    <h1 className="box-layout__title">Expensify</h1>
+                </div>
                 <LoginForm onSubmit={this.onSubmit} />
             </div>
         );
